@@ -1,6 +1,6 @@
 # QA — 0.1.0
 
-## Public GitHub prerelease ZIP (2026-11-05)
+## Public GitHub release ZIP (2026-11-05)
 
 - ZIP: [digicyfr-external-embed-inventory-0.1.0.zip](https://github.com/digicyfr/digicyfr-external-embed-inventory/releases/download/v0.1.0/digicyfr-external-embed-inventory-0.1.0.zip)
 - SHA-256: `db619049d20c6f230071fc4c6bfc471cb9c052af8787b9ed85e7e806eb06f209`
@@ -10,7 +10,7 @@
 
 ## Post-tag browser check on the exact public ZIP (2026-11-05)
 
-The ZIP above was downloaded from the public GitHub prerelease, checksum-verified, and installed on a fresh disposable WordPress 7.1/PHP 8.3.33/MariaDB 11.4.13 site. Synthetic saved-content fixtures were used; no customer content or external host was fetched.
+The ZIP above was downloaded from the public GitHub release, checksum-verified, and installed on a fresh disposable WordPress 7.1/PHP 8.3.33/MariaDB 11.4.13 site. Synthetic saved-content fixtures were used; no customer content or external host was fetched.
 
 - Real administrator Start and Continue actions completed a scan of five published posts/pages with zero skips. The host report showed three normalized external hosts and five supported source rows. An ordinary hyperlink remained outside the embed inventory. [Complete host report](evidence/0.1.0/complete-host-report.png) and [source rows](evidence/0.1.0/source-rows.png).
 - The coverage report included all five published posts/pages, including one without a supported embed. The exact-host, `core/embed` source-kind and hint-evidence filters returned one provider hint row. [Coverage](evidence/0.1.0/coverage.png) and [filtered provider hint](evidence/0.1.0/filtered-provider-hint.png).
@@ -49,7 +49,7 @@ The frozen ZIP above was installed on two more fresh disposable WordPress sites.
 
 ## Limits and open publication gates
 
-- This is a public GitHub prerelease for manual, self-hosted installation. Plugin Check's WordPress.org-specific error and warnings from the earlier ZIP remain open for any WordPress.org submission.
+- This is a public GitHub stable release for manual, self-hosted installation. Plugin Check's WordPress.org-specific error and warnings from the earlier ZIP remain open for any WordPress.org submission.
 - No manual screen-reader, broader browser matrix, or representative production-host testing has been performed. The HTTP race harness observed one Continue/Cancel ordering; it did not enumerate every possible timing.
 
 ## Automated accessibility audit on the public ZIP — 2026-11-05
@@ -57,5 +57,9 @@ The frozen ZIP above was installed on two more fresh disposable WordPress sites.
 The exact public ZIP and SHA sidecar above were verified again and installed on a fresh disposable WordPress 7.1 / PHP 8.3.33 site with synthetic saved embed content. Chromium 156.0.8078.4 and axe-core 4.10.3 ran WCAG 2/2.1/2.2 A/AA rule tags on the scan overview and completed source-row report. The plugin regions and the full source-row page had **zero axe violations**; the WordPress Dashboard baseline also had zero. At 390px, both screens had document width 390px. Keyboard Tab moved from **Exact host** to **Source kind**; Chromium's accessibility tree exposed named host, kind, evidence and Filter controls. Axe could not determine native WordPress select contrast because its background uses an image; other inconclusive full-page nodes were outside the plugin region. See [machine-readable audit evidence](evidence/0.1.0/axe-2026-11-05.json).
 
 This automated check did not find a plugin-owned defect, so the `v0.1.0` ZIP, tag, and release branch were not changed. A human screen-reader pass and representative host-content review remain open.
+
+## Stable self-hosted release decision — 2026-11-05
+
+The exact public ZIP passed the published SHA-256 sidecar check (`db619049d20c6f230071fc4c6bfc471cb9c052af8787b9ed85e7e806eb06f209`) and source-byte comparison. The protected `release/0.1.0` branch and annotated `v0.1.0` tag point to the same frozen release commit, and their CI passed. Main-branch CI and the automated browser and axe checks passed before promotion. This supports a stable self-hosted GitHub release. The ZIP, tag, release branch and attached assets were preserved. Human screen-reader testing, native-select contrast resolution, and review on a representative content host remain unperformed; axe and browser checks do not establish WCAG conformance.
 - A high-water/cursor pass observes saved content when each post reaches the cursor, not a single immutable database snapshot. Theme, page-builder, dynamic, CSS, JavaScript and browser network requests remain outside this saved-content inventory.
 - The scanner intentionally retains only normalized ASCII host and port, not full discovered URLs. Some hostname values can still identify users or organizations; keep report and CSV administrator-only.
