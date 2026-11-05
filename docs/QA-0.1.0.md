@@ -51,5 +51,11 @@ The frozen ZIP above was installed on two more fresh disposable WordPress sites.
 
 - This is a public GitHub prerelease for manual, self-hosted installation. Plugin Check's WordPress.org-specific error and warnings from the earlier ZIP remain open for any WordPress.org submission.
 - No manual screen-reader, broader browser matrix, or representative production-host testing has been performed. The HTTP race harness observed one Continue/Cancel ordering; it did not enumerate every possible timing.
+
+## Automated accessibility audit on the public ZIP — 2026-11-05
+
+The exact public ZIP and SHA sidecar above were verified again and installed on a fresh disposable WordPress 7.1 / PHP 8.3.33 site with synthetic saved embed content. Chromium 156.0.8078.4 and axe-core 4.10.3 ran WCAG 2/2.1/2.2 A/AA rule tags on the scan overview and completed source-row report. The plugin regions and the full source-row page had **zero axe violations**; the WordPress Dashboard baseline also had zero. At 390px, both screens had document width 390px. Keyboard Tab moved from **Exact host** to **Source kind**; Chromium's accessibility tree exposed named host, kind, evidence and Filter controls. Axe could not determine native WordPress select contrast because its background uses an image; other inconclusive full-page nodes were outside the plugin region. See [machine-readable audit evidence](evidence/0.1.0/axe-2026-11-05.json).
+
+This automated check did not find a plugin-owned defect, so the `v0.1.0` ZIP, tag, and release branch were not changed. A human screen-reader pass and representative host-content review remain open.
 - A high-water/cursor pass observes saved content when each post reaches the cursor, not a single immutable database snapshot. Theme, page-builder, dynamic, CSS, JavaScript and browser network requests remain outside this saved-content inventory.
 - The scanner intentionally retains only normalized ASCII host and port, not full discovered URLs. Some hostname values can still identify users or organizations; keep report and CSV administrator-only.

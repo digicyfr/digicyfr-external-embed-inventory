@@ -1,0 +1,80 @@
+{
+  "date_utc": "2026-11-05",
+  "artifact": "exact public GitHub v0.1.0 ZIP; downloaded SHA sidecar passed",
+  "stack": "WordPress 7.1 / PHP 8.3.33 / MariaDB 11.4.13; WooCommerce 11.2.2 for Woo plugins",
+  "browser": "Chromium 156.0.8078.4 via Playwright",
+  "axe_core": "4.10.3",
+  "axe_rules": "wcag2a,wcag2aa,wcag21a,wcag21aa,wcag22aa",
+  "scope": "automated checks only; no human screen-reader session",
+  "sha256": "db619049d20c6f230071fc4c6bfc471cb9c052af8787b9ed85e7e806eb06f209",
+  "screens": [
+    {
+      "name": "embed-overview",
+      "violations": [],
+      "incomplete": [
+        "color-contrast"
+      ],
+      "passes": 16,
+      "width": {
+        "viewport": 390,
+        "document": 390
+      }
+    },
+    {
+      "name": "embed-rows",
+      "violations": [],
+      "incomplete": [
+        "color-contrast"
+      ],
+      "passes": 16,
+      "width": {
+        "viewport": 390,
+        "document": 390
+      }
+    }
+  ],
+  "full_report": {
+    "name": "embed",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "targets": [
+          [
+            "#deei-kind"
+          ],
+          [
+            "#deei-evidence"
+          ],
+          [
+            "input[value=\"Filter\"]"
+          ],
+          [
+            "h3"
+          ],
+          [
+            "p:nth-child(7) > a"
+          ]
+        ]
+      }
+    ],
+    "passes": 30,
+    "width": {
+      "viewport": 390,
+      "document": 390
+    }
+  },
+  "keyboard": {
+    "exact_host_to_source_kind": true,
+    "cdp_names": [
+      "Exact host",
+      "Source kind",
+      "Evidence",
+      "Filter"
+    ]
+  },
+  "baseline": {
+    "wp_dashboard_full_page_violations": 0
+  },
+  "incomplete_note": "Plugin-scope inconclusive contrast only on WordPress native Source kind/Evidence selects; additional full-page inconclusive nodes are outside the plugin region."
+}
