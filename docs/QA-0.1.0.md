@@ -1,13 +1,23 @@
-# Local QA — 0.1.0
+# QA — 0.1.0
 
-## Current GitHub repository candidate (2026-11-05)
+## Public GitHub prerelease ZIP (2026-11-05)
 
-- ZIP: `dist/digicyfr-external-embed-inventory-0.1.0.zip`
+- ZIP: [digicyfr-external-embed-inventory-0.1.0.zip](https://github.com/digicyfr/digicyfr-external-embed-inventory/releases/download/v0.1.0/digicyfr-external-embed-inventory-0.1.0.zip)
 - SHA-256: `db619049d20c6f230071fc4c6bfc471cb9c052af8787b9ed85e7e806eb06f209`
-- The new repository snapshot adds a per-plugin GitHub `Plugin URI`, updates packaged README instructions, and adds standalone build/verification tools, Docker harness, CI, contribution/security policies and release notes outside the ZIP. Scanner, storage, authorization and admin behavior are unchanged.
-- Both standalone and workspace `verify_zip.py --against-source` passed on this ZIP; its `.sha256` sidecar passed. PHP and JavaScript syntax checks passed.
-- Fresh disposable WordPress 7.1/PHP 8.3.33 install, activation/deactivation/reactivation, and all 49 exact-ZIP contract assertions passed using the adapted standalone Docker harness. Manual screen-reader, broader browser and production-host validation remain outstanding.
-- The browser and Plugin Check results below were collected on the earlier candidate hash; they were not rerun on the current packaged README/header revision. GitHub Actions has not yet run because the repository is not published.
+- The downloaded public ZIP passed its published `.sha256` sidecar and standalone `tools/verify_zip.py --against-source` checks: 14 release files match the current source byte for byte. The release branch and tag point to these runtime bytes.
+- Fresh disposable WordPress 7.1/PHP 8.3.33 install, activation/deactivation/reactivation, and all 49 exact-ZIP contract assertions passed using the adapted standalone Docker harness. The release branch and tag GitHub Actions checks passed.
+- The later candidate changed the packaged plugin header/README and repository tooling; scanner, storage, authorization and admin behavior are unchanged. Plugin Check below ran on the earlier candidate hash and has **not** been repeated on this public ZIP.
+
+## Post-tag browser check on the exact public ZIP (2026-11-05)
+
+The ZIP above was downloaded from the public GitHub prerelease, checksum-verified, and installed on a fresh disposable WordPress 7.1/PHP 8.3.33/MariaDB 11.4.13 site. Synthetic saved-content fixtures were used; no customer content or external host was fetched.
+
+- Real administrator Start and Continue actions completed a scan of five published posts/pages with zero skips. The host report showed three normalized external hosts and five supported source rows. An ordinary hyperlink remained outside the embed inventory. [Complete host report](evidence/0.1.0/complete-host-report.png) and [source rows](evidence/0.1.0/source-rows.png).
+- The coverage report included all five published posts/pages, including one without a supported embed. The exact-host, `core/embed` source-kind and hint-evidence filters returned one provider hint row. [Coverage](evidence/0.1.0/coverage.png) and [filtered provider hint](evidence/0.1.0/filtered-provider-hint.png).
+- The browser downloaded a six-line CSV (header plus five rows). It contained direct, provider-hint and potential-lazy evidence, and omitted saved URL paths, query tokens and ordinary-link hosts. The synthetic CSV remains private test output and is not committed.
+- At a 390px viewport, the document width was 390px and the 560px source table scrolled inside its 368px container; there was no page-wide horizontal overflow or browser script error. [390px source report](evidence/0.1.0/source-rows-390px.png).
+- After a saved-content edit with the **same** `post_modified_gmt` second, all three prior source rows for that page showed `Stale: Yes`, and its coverage entry showed `Stale or unavailable`. The content SHA-256 changed while the timestamp stayed fixed. [Same-second stale report](evidence/0.1.0/same-second-stale.png).
+- Both disposable containers and volumes were removed after the check.
 
 ## Earlier candidate evidence (ZIP SHA-256 7499cf318cdb39dce92075ab885ec47416f3813fc4a60b79e92a0a8750dc2141)
 
@@ -39,7 +49,7 @@ The frozen ZIP above was installed on two more fresh disposable WordPress sites.
 
 ## Limits and open publication gates
 
-- This is a locally accepted, self-hosted ZIP candidate. Plugin Check's WordPress.org-specific error and warnings remain open for any WordPress.org submission.
-- No manual screen-reader, broader browser matrix, real merchant, or production-host testing has been performed. The HTTP race harness observed one Continue/Cancel ordering; it did not enumerate every possible timing.
+- This is a public GitHub prerelease for manual, self-hosted installation. Plugin Check's WordPress.org-specific error and warnings from the earlier ZIP remain open for any WordPress.org submission.
+- No manual screen-reader, broader browser matrix, or representative production-host testing has been performed. The HTTP race harness observed one Continue/Cancel ordering; it did not enumerate every possible timing.
 - A high-water/cursor pass observes saved content when each post reaches the cursor, not a single immutable database snapshot. Theme, page-builder, dynamic, CSS, JavaScript and browser network requests remain outside this saved-content inventory.
 - The scanner intentionally retains only normalized ASCII host and port, not full discovered URLs. Some hostname values can still identify users or organizations; keep report and CSV administrator-only.
