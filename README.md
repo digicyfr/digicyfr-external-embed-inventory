@@ -2,6 +2,16 @@
 
 Free, open-source WordPress plugin (GPL-2.0-or-later). Version 0.1.0 is a **local saved-content inventory**, not a network scan, request log, consent tool, or privacy verdict. It adds no front-end hook or output and sends no requests to found hosts.
 
+## Website guides and stable release
+
+- [External Embed Inventory: English overview and installation](https://www.digicyfr.com/en/wordpress-plugins/digicyfr-external-embed-inventory)
+- [Wykaz zewnętrznych osadzeń: opis i instalacja po polsku](https://www.digicyfr.com/pl/wordpress-plugins/digicyfr-external-embed-inventory)
+- [Stable v0.1.0 release, ZIP and checksum](https://github.com/digicyfr/digicyfr-external-embed-inventory/releases/tag/v0.1.0)
+
+<a href="https://www.digicyfr.com/en/wordpress-plugins/digicyfr-external-embed-inventory"><img src="https://www.digicyfr.com/images/wordpress-plugins/digicyfr-external-embed-inventory.png" alt="External embed inventory report listing example hosts" width="520"></a>
+
+_Example screenshot from a disposable test site._
+
 ## Use
 
 Install the ZIP in WordPress, activate it, then open **Tools → External Embed Inventory** as an administrator. Click **Start scan** and **Continue** until the attempt completes. Each Continue handles at most ten published posts or pages. The previous complete report stays available during a new attempt. An incomplete attempt never replaces it. Use the paged host/source and coverage reports, and download the private CSV only from a complete report. Rescan after editing, publishing or unpublishing content. Updates of this self-hosted plugin are manual.
@@ -20,7 +30,7 @@ At most ten posts per request, 512 KiB of saved content per post, 300 candidates
 
 Four private InnoDB tables store a run ledger, normalized host rows, per-post coverage (including zero-match posts), and a singleton scan lock. Two non-autoloaded options identify the current attempt and active complete report. A hostname can itself contain an identifier, so report and CSV require `manage_options`. CSV text is guarded against spreadsheet formulas. Deactivation keeps report data. Uninstall removes only these plugin-owned tables and options and leaves posts/pages intact. Retention keeps only the active complete run plus the current attempt; a new start replaces an old incomplete/cancelled attempt.
 
-Requires WordPress 7.1+, PHP 8.3+, and InnoDB. WordPress 7.1/PHP 8.3.33/MariaDB 11.4.13 are the local test target for this candidate; see `docs/QA-0.1.0.md` in this repository for actual evidence and open gates. No WordPress.org publication is claimed.
+Requires WordPress 7.1+, PHP 8.3+, and InnoDB. WordPress 7.1/PHP 8.3.33/MariaDB 11.4.13 were the local test environment for v0.1.0; see `docs/QA-0.1.0.md` in this repository for actual evidence and open gates. No WordPress.org publication is claimed.
 
 ## Development
 
