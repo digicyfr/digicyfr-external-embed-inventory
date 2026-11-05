@@ -1,0 +1,11 @@
+# Runtime files only; tests and development documents stay out of the ZIP.
+digicyfr-external-embed-inventory.php
+includes
+assets
+languages/digicyfr-external-embed-inventory-pl_PL.po
+languages/digicyfr-external-embed-inventory-pl_PL.mo
+uninstall.php
+readme.txt
+README.md
+CHANGELOG.md
+LICENSE

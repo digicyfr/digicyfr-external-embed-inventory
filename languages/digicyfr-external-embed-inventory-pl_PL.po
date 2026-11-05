@@ -1,0 +1,251 @@
+msgid ""
+msgstr "Project-Id-Version: Digicyfr External Embed Inventory 0.1.0\nLanguage: pl_PL\nContent-Type: text/plain; charset=UTF-8\n"
+
+msgid "A private, local inventory of external references found in saved post and page content."
+msgstr "Prywatny, lokalny wykaz zewnętrznych odwołań zapisanych we wpisach i stronach."
+
+msgid "Active complete report"
+msgstr "Aktywny pełny raport"
+
+msgid "All evidence"
+msgstr "Wszystkie typy"
+
+msgid "All kinds"
+msgstr "Wszystkie rodzaje"
+
+msgid "Block count limit exceeded."
+msgstr "Przekroczono limit liczby bloków."
+
+msgid "Block nesting limit exceeded."
+msgstr "Przekroczono limit zagnieżdżenia bloków."
+
+msgid "CSV could not be completed. No file was downloaded."
+msgstr "Nie udało się ukończyć CSV. Nie pobrano pliku."
+
+msgid "Cancel attempt"
+msgstr "Anuluj próbę"
+
+msgid "Cancelled"
+msgstr "Anulowany"
+
+msgid "Candidates:"
+msgstr "Kandydaci:"
+
+msgid "Complete"
+msgstr "Pełny"
+
+msgid "Continue (up to 10 posts)"
+msgstr "Kontynuuj (do 10 wpisów)"
+
+msgid "Could not lock the active report for export."
+msgstr "Nie udało się zablokować aktywnego raportu do eksportu."
+
+msgid "Could not lock the active report."
+msgstr "Nie udało się zablokować aktywnego raportu."
+
+msgid "Could not prepare a private CSV file."
+msgstr "Nie udało się przygotować prywatnego pliku CSV."
+
+msgid "Count"
+msgstr "Liczba"
+
+msgid "Coverage query failed."
+msgstr "Zapytanie o zakres nie powiodło się."
+
+msgid "Coverage reason:"
+msgstr "Przyczyna niepełnego zakresu:"
+
+msgid "Coverage, including pages without matches"
+msgstr "Zakres, także strony bez trafień"
+
+msgid "Covered posts:"
+msgstr "Objęte wpisy:"
+
+msgid "Current attempt:"
+msgstr "Bieżąca próba:"
+
+msgid "Current saved content"
+msgstr "Aktualna zapisana treść"
+
+msgid "Cursor:"
+msgstr "Kursor:"
+
+msgid "Download CSV"
+msgstr "Pobierz CSV"
+
+msgid "Evidence"
+msgstr "Typ wskazówki"
+
+msgid "Exact host"
+msgstr "Dokładny host"
+
+msgid "External Embed Inventory"
+msgstr "Wykaz zewnętrznych osadzeń"
+
+msgid "External Embed Inventory could not initialize its scan lock."
+msgstr "Nie udało się zainicjować blokady skanu."
+
+msgid "External Embed Inventory requires InnoDB for safe resumable scans."
+msgstr "Wykaz zewnętrznych osadzeń wymaga InnoDB do bezpiecznego wznawiania skanów."
+
+msgid "Filter"
+msgstr "Filtruj"
+
+msgid "Finished (UTC):"
+msgstr "Zakończono (UTC):"
+
+msgid "HTML tag count limit exceeded."
+msgstr "Przekroczono limit liczby znaczników HTML."
+
+msgid "Hints and lazy URLs"
+msgstr "Wskazówki i adresy leniwe"
+
+msgid "Host"
+msgstr "Host"
+
+msgid "Host report query failed."
+msgstr "Zapytanie raportu hostów nie powiodło się."
+
+msgid "Hosts found in saved content"
+msgstr "Hosty znalezione w zapisanej treści"
+
+msgid "Ignored values:"
+msgstr "Pominięte wartości:"
+
+msgid "In progress"
+msgstr "W toku"
+
+msgid "Incomplete"
+msgstr "Niepełny"
+
+msgid "Invalid URLs:"
+msgstr "Nieprawidłowe adresy URL:"
+
+msgid "Local saved-content references only. A found host is not proof of a browser request or a privacy verdict. Rescan after content changes."
+msgstr "Tylko odwołania z zapisanej treści. Znaleziony host nie dowodzi żądania przeglądarki ani zgodności z prywatnością. Po zmianie treści wykonaj nowy skan."
+
+msgid "More than 300 URL candidates in a post."
+msgstr "We wpisie znaleziono ponad 300 kandydatów URL."
+
+msgid "Next page"
+msgstr "Następna strona"
+
+msgid "No"
+msgstr "Nie"
+
+msgid "No complete report is available for export."
+msgstr "Nie ma pełnego raportu do eksportu."
+
+msgid "No complete report yet. CSV is unavailable until a scan completes without skips."
+msgstr "Nie ma jeszcze pełnego raportu. CSV będzie dostępny po zakończeniu skanu bez pominięć."
+
+msgid "No matching saved references."
+msgstr "Brak pasujących zapisanych odwołań."
+
+msgid "No supported saved external references found in this report. Unsupported and dynamic sources remain outside scope."
+msgstr "W tym raporcie nie znaleziono obsługiwanych zapisanych odwołań zewnętrznych. Nieobsługiwane i dynamiczne źródła pozostają poza zakresem."
+
+msgid "Occurrences"
+msgstr "Wystąpienia"
+
+msgid "Page"
+msgstr "Strona"
+
+msgid "Page ID"
+msgstr "ID strony"
+
+msgid "Pages"
+msgstr "Strony"
+
+msgid "Saved HTML ended in an incomplete tag."
+msgstr "Zapisany HTML kończy się niepełnym znacznikiem."
+
+msgid "Saved content exceeded 512 KiB."
+msgstr "Zapisana treść przekroczyła 512 KiB."
+
+msgid "Saved content parsing failed."
+msgstr "Nie udało się przeanalizować zapisanej treści."
+
+msgid "Saved resource URL"
+msgstr "Zapisany adres zasobu"
+
+msgid "Saved source references"
+msgstr "Zapisane odwołania źródłowe"
+
+msgid "Scan"
+msgstr "Skan"
+
+msgid "Scan action completed."
+msgstr "Czynność skanu została wykonana."
+
+msgid "Scan action failed."
+msgstr "Czynność skanu nie powiodła się."
+
+msgid "Scanned:"
+msgstr "Przeskanowano:"
+
+msgid "Scheme"
+msgstr "Schemat"
+
+msgid "Skipped:"
+msgstr "Pominięto:"
+
+msgid "Source"
+msgstr "Źródło"
+
+msgid "Source kind"
+msgstr "Rodzaj źródła"
+
+msgid "Source report query failed."
+msgstr "Zapytanie raportu źródeł nie powiodło się."
+
+msgid "Stale"
+msgstr "Nieaktualne"
+
+msgid "Stale or unavailable"
+msgstr "Nieaktualna lub niedostępna"
+
+msgid "Start a new scan"
+msgstr "Rozpocznij nowy skan"
+
+msgid "Start scan"
+msgstr "Rozpocznij skan"
+
+msgid "Started (UTC):"
+msgstr "Rozpoczęto (UTC):"
+
+msgid "Status"
+msgstr "Stan"
+
+msgid "Storage error. The previous complete report remains unchanged."
+msgstr "Błąd zapisu danych. Poprzedni pełny raport pozostaje bez zmian."
+
+msgid "Storage or coverage failed; retry Continue if it is available."
+msgstr "Błąd zapisu lub zakresu; ponów Kontynuuj, jeśli jest dostępne."
+
+msgid "Unclassified or ambiguous:"
+msgstr "Niesklasyfikowane lub niejednoznaczne:"
+
+msgid "Unknown"
+msgstr "Nieznany"
+
+msgid "Unknown action."
+msgstr "Nieznana czynność."
+
+msgid "Unresolved relative:"
+msgstr "Nierozstrzygnięte względne:"
+
+msgid "Unsupported attributes:"
+msgstr "Nieobsługiwane atrybuty:"
+
+msgid "View coverage and stale posts"
+msgstr "Zobacz zakres i nieaktualne wpisy"
+
+msgid "Yes"
+msgstr "Tak"
+
+msgid "You cannot perform this action."
+msgstr "Nie możesz wykonać tej czynności."
+
+msgid "You cannot view this report."
+msgstr "Nie możesz wyświetlić tego raportu."

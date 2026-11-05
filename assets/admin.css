@@ -1,0 +1,13 @@
+.deei-wrap { max-width: 1100px; }
+.deei-wrap section { margin: 1.5rem 0; }
+.deei-action { display: inline-block; margin: 0 .65rem .65rem 0; }
+.deei-table-wrap { max-width: 100%; overflow-x: auto; }
+.deei-table-wrap table { min-width: 560px; }
+.deei-wrap label { display: inline-block; margin: .4rem .2rem .4rem 0; }
+.deei-wrap input[type="text"], .deei-wrap input:not([type]) { max-width: 100%; box-sizing: border-box; }
+.deei-wrap .notice { margin-left: 0; }
+@media (max-width: 600px) {
+  .deei-wrap form:not(.deei-action) label,
+  .deei-wrap form:not(.deei-action) input,
+  .deei-wrap form:not(.deei-action) select { display: block; width: 100%; max-width: 100%; box-sizing: border-box; }
+}
